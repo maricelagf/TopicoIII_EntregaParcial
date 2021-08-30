@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<title>Autoevaluacion</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+        <script language="JavaScript">
+        //<!--
+        alert("Bienvenido a la Autoevaluación correspondiente al éxito \n\nSeleccione las respuestas que crea correctas, teniendo en "+
+            "\ncuenta las siguientes consideraciones \n\n1. Los aciertos tienen el valor de un punto"+
+            " \n\n2. Las respuestas no contestadas ni suman ni restan puntos.") 
+        //-->
+        
+        var resp = new Array;
+        var faite = new Array;
+        var score = 0;
+        
+        resp[1] = "a";
+        resp[2] = "b";
+        resp[3] = "b";
+        resp[4] = "c";
+        resp[5] = "b";
+        resp[6] = "a";
+        resp[7] = "b";
+        resp[8] = "a";
+        resp[9] = "a";
+        resp[10] = "c"
+        resp[11] = "b"
+        resp[12] = "a"
+        resp[13] = "b"
+        resp[14] = "c"
+        resp[15] = "c";
+        
+        function Engine(question, repose)
+        {
+        if (repose != resp[question])
+            {
+                    if (!faite[question])
+                            {faite[question] = -1;}
+                        }
+                else {
+        
+                        if (!faite[question]) {
+                                faite[question] = -1;
+                                score++;
+                                alert("¡Correcto! Tu puntuación es : " + score );
+                                }
+        
+                        }
+        }
+        
+        function Nivel () {
+        
+                if (score >= 12 && score < 15) {
+                        alert(score + "/15 " + "Muy bien, eres una persona exitosa");
+                        }
+                if (score >= 9 && score < 11) {
+                        alert(score + "/15 " + "Bien, sigue adelante para llegar al éxito");
+                        }
+                if (score >= 5 && score < 8) {
+                        alert(score + "/15 " + "Aprobado por los pelos. No te fíes, reflexiona y cambia habitos y aptitudes para alcanzar el éxito");
+                        }
+                if (score >= 2 && score < 4) {
+                        alert(score + "/15 " + "Insuficiente. Has de estudiar más sobre cada uno de los aspectos de este sistema para lograr el éxito");
+                        }
+                if (score < 1) {
+                        alert("Su puntuación es: "+ score
+                        +"\nLa puntuación máxima que podía obtener es 10"
+                        +"\nTiene que revisar nuevamente sus lecciones"
+                        +"\nSu porcentaje de aciertos es menos del 10%");
+                        }
+        }
+        
+    </script>
+</head>
+    
+<body bgcolor="#53ffe8" text="#000000">
+        <a class="btn" href="../index.html">Regresar</a>
+		
+        <table width="785" border="0" align="center" cellpadding="0" cellspacing="0" bordercolor="#336699" height="2">
+            <tr>
+              <td width="50" rowspan="2"><img src="../images/LOGO-SOFGOM_1.png" width="50" height="50"></td>
+              <td width="515" class="TopicTitle"><font face="Verdana, Arial, Helvetica, sans-serif" color="#336699"><b>Test
+                de Autoevaluación</b></font></td>
+            </tr>
+            <tr>
+              <td width="515" bgcolor="#336699"> </td>
+            </tr>
+            <tr bgcolor="#FFFFFF">
+              <td> </td>
+              <td class="TopicSubtitle"><font face="Verdana, Arial, Helvetica, sans-serif" color="#336699">¿Cómo ser EXITOSO?</font></td>
+            </tr>
+            <tr>
+              <td height="521"> </td>
+              <td height="521">
+                <div align="center">
+          <div align="left">
+          <FORM NAME="formulario" ACTION="">
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        1.¿De estas tres características, ¿cuál de ellas preferirías a la hora de escoger un trabajo?</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=1 onClick="Engine(1, this.value)" type=radio value=a>
+                        a. Que sea un trabajo seguro.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=1 onClick="Engine(1, this.value)" type=radio value=b>
+                        b. Tenerlo cerca de casa o que no implique desplazamientos..</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=1 onClick="Engine(1, this.value)" type=radio value=c>
+                        c. Que sea un trabajo muy bien pagado.</font></p>
+                      
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        2. Triunfar es para ti…</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=2 onClick="Engine(2, this.value)" type=radio value=a>
+                        a. Ganar mucho dinero..</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=2 onClick="Engine(2, this.value)" type=radio value=b>
+                        b. Desarrollarme y ser feliz en mi trabajo.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=2 onClick="Engine(2, this.value)" type=radio value=c>
+                        c. Ascender socialmente.</font></p>
+                      <p> </p>
+                      
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        3.¿Eres emotivo o impulsivo?</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=3 onClick="Engine(3, this.value)" type=radio value=a>
+                        a. Sí.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=3 onClick="Engine(3, this.value)" type=radio value=b>
+                        b. No, domino mis emociones.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=3 onClick="Engine(3, this.value)" type=radio value=c>
+                        c. Soy capaz de conservar una apariencia de calma.</font></p>
+                      <p> </p>
+                      
+                      
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        4.Acudes a una entrevista de trabajo y después de realizar tests diversos, 
+                        te dicen que debes pasar un examen médico y psiquiátrico y hasta un detector 
+                        de mentiras, en los que te hacen preguntas personales e íntimas. 
+                        ¿Accederías?</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=4 onClick="Engine(4, this.value)" type=radio value=a>
+                        a. Sí, sin dudarlo..</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=4 onClick="Engine(4, this.value)" type=radio value=b>
+                        b. No, me parece inadmisible.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=4 onClick="Engine(4, this.value)" type=radio value=c>
+                        c. Solamente me prestaría a los clásicos tests de aptitud y 
+                        acaso un examen médico si el trabajo lo requiriera.</font></p>
+                      <p> </p>
+                      
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        5.¿Eres optimista y te lanzas sin pesimismo, confiando en que tarde 
+                        o temprano llegarás a tu meta? </font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=5 onClick="Engine(5, this.value)" type=radio value=a>
+                        a. Moderadamente.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=5 onClick="Engine(5, this.value)" type=radio value=b>
+                        b. Sí.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=5 onClick="Engine(5, this.value)" type=radio value=c>
+                        c. No.</font></p>
+                      <p></p>
+                      
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        6.¿Tienes firme voluntad de alcanzar el éxito en la profesión 
+                        que has elegido? </font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=6 onClick="Engine(6, this.value)" type=radio value=a>
+                        a. Sí, totalmente.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=6 onClick="Engine(6, this.value)" type=radio value=b>
+                        b. Me da igual.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=6 onClick="Engine(6, this.value)" type=radio value=c>
+                        c. Espero triunfar.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        7.En el trabajo, cuando hay distintas opiniones, 
+                        defiendes tu punto de vista… </font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=7 onClick="Engine(7, this.value)" type=radio value=a>
+                        a. Con terquedad.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=7 onClick="Engine(7, this.value)" type=radio value=b>
+                        b. De forma moderada.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=7 onClick="Engine(7, this.value)" type=radio value=c>
+                        c. No. Acepto la opinión de mis superiores.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        8.¿Crees que el éxito es compatible con una vida personal armoniosa 
+                        o una convivencia familiar feliz?</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=8 onClick="Engine(8, this.value)" type=radio value=a>
+                        a. Sí, por supuesto.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=8 onClick="Engine(8, this.value)" type=radio value=b>
+                        b. Es incompatible con ambos.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=8 onClick="Engine(8, this.value)" type=radio value=c>
+                        c. Eso dependerá de cada persona y circunstancia.</font></p>
+                      <p></p>
+                      
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        9.¿Te importaría sacrificar descanso y ocio para poder dedicarte a 
+                        tu profesión y triunfar?</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=9 onClick="Engine(9, this.value)" type=radio value=a>
+                        a. Sólo si es verdaderamente necesario.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=9 onClick="Engine(9, this.value)" type=radio value=b>
+                        b. No.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=9 onClick="Engine(9, this.value)" type=radio value=c>
+                        c. Sí.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        10.Soy muy desordenado…</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=10 onClick="Engine(10, this.value)" type=radio value=a>
+                        a. y eso me agobia.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=10 onClick="Engine(10, this.value)" type=radio value=b>
+                        b. pero no me importa.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=10 onClick="Engine(10, this.value)" type=radio value=c>
+                        c. no lo soy.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        11.¿Qué tal andas de salud? ¿Tienes alguna de estos síntomas o enfermedades: 
+                        fatiga, nerviosismo, depresión…?</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=11 onClick="Engine(11, this.value)" type=radio value=a>
+                        a. Sí, a menudo.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=11 onClick="Engine(11, this.value)" type=radio value=b>
+                        b. No, rara vez.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=11 onClick="Engine(11, this.value)" type=radio value=c>
+                        c. Ocasionalmente.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        12.Me gusta mi trabajo</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=12 onClick="Engine(12, this.value)" type=radio value=a>
+                        a. Sí.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=12 onClick="Engine(12, this.value)" type=radio value=b>
+                        b. Se puede mejorar</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=12 onClick="Engine(12, this.value)" type=radio value=c>
+                        c. No me gusta mucho o nada en absoluto.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        13.Cuando trabajo en equipo…</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=13 onClick="Engine(13, this.value)" type=radio value=a>
+                        a. aporto ideas, pero no suelen ser las que se aceptan al final.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=13 onClick="Engine(13, this.value)" type=radio value=b>
+                        b. la mayor parte de las decisiones que se toman son sugerencias mías.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=13 onClick="Engine(14, this.value)" type=radio value=c>
+                        c. un poco de todo.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        14.El éxito es para mi…</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=14 onClick="Engine(15, this.value)" type=radio value=a>
+                        a. amar y ser amado.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=14 onClick="Engine(15, this.value)" type=radio value=b>
+                        b. disfrutar de una buena posición económica.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=14 onClick="Engine(15, this.value)" type=radio value=c>
+                        c. disfrutar de una buena posición profesional.</font></p>
+                      <p></p>
+
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        15.A las citas…</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=15 onClick="Engine(6, this.value)" type=radio value=a>
+                        a. A veces llego puntual y otras llego tarde.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=15 onClick="Engine(6, this.value)" type=radio value=b>
+                        b. Suelo llegar tarde.</font></p>
+                      <p> <font face="Verdana, Arial, Helvetica, sans-serif" size="2">
+                        <input name=15 onClick="Engine(6, this.value)" type=radio value=c>
+                        c. Llego puntual.</font></p>
+                      <p></p>
+
+                      <p>
+                        <input name=Resulta onClick=Nivel() type=button value=Resultados>
+                        <input type="button" name="repose" value="Respuestas Correctas"
+                           onClick="alert('Respuestas Correctas \n\n 1A  6A  11B\n\n 2B  7B  12A\n\n 3B  8A  13B\n\n 4C  9A  14C\n\n 5B 10C  15C')">
+                        <input type="reset" value="Borrar resultados" name="reset">
+                      </p>
+                      <p><font face="Verdana, Arial, Helvetica, sans-serif" size="2">* Para
+                        tomar nuevamente la autoevaluación presione el botón
+                        'F5' </font></p>
+                      </FORM>
+            </div>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <p> </p>
+
+    </body>
+</html>
